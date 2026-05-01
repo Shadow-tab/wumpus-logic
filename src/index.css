@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface2: #181818;
+  --border: #222222;
+  --border2: #2a2a2a;
+  --accent: #00ff87;
+  --accent2: #00cc6a;
+  --muted: #444444;
+  --text: #e8e8e8;
+  --text2: #888888;
+  --danger: #ff4444;
+  --warn: #ff9900;
+  --info: #4488ff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+.cell-agent {
+  background: #003322;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 12px rgba(0, 255, 135, 0.2);
+  color: var(--accent);
+}
+.cell-safe {
+  background: #0d1f14;
+  border-color: #1a3a22 !important;
+}
+.cell-inferred {
+  background: #080f0a;
+  border-color: #0f2a14 !important;
+}
+.cell-unknown {
+  background: var(--surface2);
+  border-color: var(--border) !important;
+}
